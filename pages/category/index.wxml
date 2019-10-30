@@ -1,2 +1,5 @@
 <!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<!-- 搜索栏 -->
+<search/>
+
+

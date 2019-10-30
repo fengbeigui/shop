@@ -56,7 +56,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "beiyougou",
+					"name": "pages/category/index",
+					"pathName": "pages/category/index",
 					"scene": null
 				}
 			]
