@@ -20,6 +20,7 @@
   height: 100rpm;
   line-height: 100rpx;
   text-align: center;
+  font-size: 14px;
 }
 
 /* 左侧栏高亮 */
@@ -62,12 +63,12 @@
 /* 图片类 */
 .brand-item{
   width: 33.3%;
-  padding: 20rpm;
+  text-align: center;
   box-sizing: border-box;
 }
 .brand-item image{
-  width: 100%;
-  max-height: 200rpx;
+  width: 120rpx;
+  max-height: 120rpx;
 }
 /* 图片文字 */
 .brand-text{

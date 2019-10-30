@@ -4,23 +4,33 @@
 
 <!-- 左侧栏 -->
 <!-- data-index="{{index}}传参 -->
+<!-- 注意for为list；渲染的时候是item点加后面获取的参数 -->
 <view class="container">
   <view class="menu">
-    <view class="menu-item {{current === index ? 'active' : ''}}" wx:for="{{ [1,1,1,1,1,1,1,7,8,9,10,11] }}" wx:key="{{index}}" bindtap="handleChange" data-index="{{index}}">
-      电器{{index}}
+    <view class="menu-item {{current === index ? 'active' : ''}}" wx:for="{{ list }}" wx:key="{{index}}" bindtap="handleChange" data-index="{{index}}">
+      {{item.cat_name}}
     </view>
   </view>
 
   <!-- 内容区,右边的品牌类表 -->
   <view class="content">
-    <view class="brand-title">电视</view>
-    <view class="brands">
-      <!-- <navigator></navigator> 相当于a标签 -->
-      <navigator url="" class="brand-item" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" wx:key="{{index}}">
-        <image src="https://gw.alicdn.com/bao/upload/TB17BFUixv1gK0jSZFFXXb0sXXa.jpg_Q75.jpg" mode="aspectFill">
-        </image>
-        <view class="brand-text">曲面电视</view>
-      </navigator>
+    <view wx:for="{{list[current].children}}" wx:key="index">
+    <!-- 标题 -->
+      <view class="brand-title">{{item.cat_name}}</view>
+
+      <view class="brands">
+        <!-- <navigator></navigator> 相当于a标签 -->
+        <!-- list[current].children list0 1 2 -->
+        <navigator url="" 
+        class="brand-item"         
+        wx:for="{{item.children}}" 
+        wx:key="{{index}}">
+          <image src="{{item.cat_icon}}" 
+          mode="aspectFill">
+          </image>
+          <view class="brand-text">曲面电视</view>
+        </navigator>
+      </view>
     </view>
   </view>
 </view>
