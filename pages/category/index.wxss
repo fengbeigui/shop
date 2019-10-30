@@ -1,1 +1,44 @@
 /* pages/category/index.wxss */
+.container{
+ /*  flex布局，左右定位 */
+    display: flex;
+    justify-content: space-between;
+    /* 固定定位 */
+    position: fixed;
+    top:100rpx;
+    bottom: 0
+
+}
+ .menu{
+  width: 200rpx;
+  height: 100%;
+  background: #eee;
+  overflow-y: auto;
+
+}
+.container .menu-item{
+  height: 100rpm;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+/* 左侧栏高亮 */
+.active{
+  background: #fff;
+  color: red;
+  /* 永远给定在一位，给父元素添加 */
+  position: relative;
+}
+/* 伪元素 */
+/* 伪元素需要添加content */
+.active::before{
+  display: block;
+  content: "";
+  width:3px;
+  height: 60rpx;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 20rpx;
+
+}
