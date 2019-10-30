@@ -1,0 +1,31 @@
+/* components/search/index.wxss */
+/* 导入字体样式 */
+@import "../../common/style.wxss";
+/* 搜索 */
+
+/* 搜索 */
+
+.search {
+  height: 70rpx;
+  background: #eb4450;
+}
+
+.input {
+  /* 相对路径 */
+  position: relative;
+  text-align: center;
+  background: #fff;
+  font-size: 30rpx;
+  margin: 0 15rpx;
+  color: #bcbcbc;
+  border-radius: 4px;
+}
+
+.iconsearch {
+  position: absolute;
+  left: 310rpx;
+  top: 10rpx;
+  color: #bcbcbc;
+}
+
+/* ---- */

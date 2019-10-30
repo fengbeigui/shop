@@ -1,27 +1,5 @@
 /**index.wxss**/
-/* 搜索 */
-.search {
-  height: 80rpx;
-  background: #eb4450;
-}
 
-.input {
-  /* 相对路径 */
-  position: relative;
-  text-align: center;
-  background: #fff;
-  font-size: 30rpx;
-  margin: 0 15rpx;
-  color: #bcbcbc;
-  border-radius: 4px;
-}
-
-.iconsearch {
-  position: absolute;
-  left: 300rpx;
-  top: 5rpx;
-  color: #bcbcbc;
-}
 
 /* 轮播图 */
 

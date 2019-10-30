@@ -1,9 +1,6 @@
 <!--index.wxml-->
-
-<view class="search">
-  <input class="input" placeholder="搜索"></input>
-  <view class="iconfont iconsearch"> </view>
-</view>
+<!-- 搜索栏 -->
+<search/>
 
 <!-- 轮播图 -->
 <!-- indicator-dots是否显示面板指示点 -->
