@@ -40,5 +40,37 @@
   position: absolute;
   left: 0;
   top: 20rpx;
-
+}
+/* 内容部分 */
+.content{
+  /* 把右边的内容做 flex: 1;*/
+  flex: 1;
+  padding: 20rpx;
+  /* 内容部分加滚动 */
+  overflow-y:scroll;
+}
+/* 电视文总居中 */
+.brand-title{
+  margin: 20rpm 0;
+  text-align: center;
+}
+.brands{
+  display: flex;
+  /* 	规定灵活的项目在必要的时候拆行或拆列。 */
+  flex-wrap: wrap;
+}
+/* 图片类 */
+.brand-item{
+  width: 33.3%;
+  padding: 20rpm;
+  box-sizing: border-box;
+}
+.brand-item image{
+  width: 100%;
+  max-height: 200rpx;
+}
+/* 图片文字 */
+.brand-text{
+  font-size: 12px;
+  text-align: center;
 }

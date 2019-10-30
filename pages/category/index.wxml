@@ -11,14 +11,15 @@
     </view>
   </view>
 
-  <!-- 内容区 -->
+  <!-- 内容区,右边的品牌类表 -->
   <view class="content">
+    <view class="brand-title">电视</view>
     <view class="brands">
       <!-- <navigator></navigator> 相当于a标签 -->
       <navigator url="" class="brand-item" wx:for="{{[1,2,3,4,5,6,7,8,9,10,11]}}" wx:key="{{index}}">
         <image src="https://gw.alicdn.com/bao/upload/TB17BFUixv1gK0jSZFFXXb0sXXa.jpg_Q75.jpg" mode="aspectFill">
         </image>
-
+        <view class="brand-text">曲面电视</view>
       </navigator>
     </view>
   </view>
