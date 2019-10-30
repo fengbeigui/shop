@@ -7,21 +7,41 @@
 
 <!-- 轮播图 -->
 <!-- indicator-dots是否显示面板指示点 -->
- <swiper indicator-dots>
- <!-- block不会渲染到页面上，只是用来循环 -->
-   <block wx:for="{{banners}}" wx:key="{{index}}">
-     <swiper-item>
-       <image src="{{item}}" mode="aspectFill"></image>
-     </swiper-item>
-   </block>
- </swiper>
+<swiper indicator-dots>
+  <!-- block不会渲染到页面上，只是用来循环 -->
+  <block wx:for="{{banners}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" mode="aspectFill"></image>
+    </swiper-item>
+  </block>
+</swiper>
 
 
- <!-- 菜单列表 -->
- <view class="menus">
-   <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
-     <image src="{{item}}"></image>
-   </navigator>
- </view>
+<!-- 菜单列表 -->
+<view class="menus">
+  <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
+    <image src="{{item}}"></image>
+  </navigator>
+</view>
 <!-- 菜单列表结束 -->
 
+<!-- 楼层列表 分析，左侧一大块，右侧一块-->
+<view class="floor-title">
+  <image mode="aspectFill" src="https://cdn.pinduoduo.com/home/static/img/index/seckill_v2.jpg"></image>
+</view>
+
+<view class="floor">
+  <!-- 左侧的大图 -->
+  <view class="left">
+    <navigator url="">
+      <image src="https://img11.360buyimg.com/babel/s580x740_jfs/t1/66369/22/14161/29601/5db85118E5505db15/a286de753ad4f716.jpg!cc_290x370.webp"></image>
+    </navigator>
+  </view>
+
+  <!-- 右侧的四张小图 -->
+  <view class="right">
+    <navigator url="" wx:for="{{ [1,2,3,4] }}">
+      <image src="https://cdn.pinduoduo.com/home/static/img/subject/food.jpg"></image>
+    </navigator>
+  </view>
+</view>

@@ -14,7 +14,6 @@
   margin: 0 15rpx;
   color: #bcbcbc;
   border-radius: 4px;
-
 }
 
 .iconsearch {
@@ -22,34 +21,71 @@
   left: 300rpx;
   top: 5rpx;
   color: #bcbcbc;
-
 }
 
 /* 轮播图 */
-.page-section{
+
+.page-section {
   width: 100%;
   margin-bottom: 60rpx;
 }
-.page-section_center{
+
+.page-section_center {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.page-section:last-child{
+
+.page-section:last-child {
   margin-bottom: 0;
 }
+
 /* 轮播图*/
 
-
 /* 菜单列表样式 */
-.menus{
-   display: flex;
-   justify-content: space-around;
-   padding: 20rpx 0;
- }
 
-  .menus image{
-   width: 100rpx;
-   height: 100rpx;
- }
+.menus {
+  display: flex;
+   /* 平均分配 */
+  justify-content: space-around;
+  padding: 20rpx 0;
+}
+
+.menus image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+/* 楼层列表 */
+
+.floor-title image {
+  width: 100%;
+  height: 60rpx;
+}
+
+.floor {
+  display: flex;
+  justify-content: space-between;
+  padding: 16rpx;
+}
+
+.floor .left image {
+  width: 232rpx;
+  height: 390rpx;
+}
+
+.floor .right {
+  /* 剩下全部空间给他 */
+  flex: 1;
+  display: flex;
  
+  justify-content: space-between;
+  /* 换行 */
+  flex-wrap: wrap;
+  padding-left: 20rpx;
+}
+
+.floor .right image {
+  width: 230rpx;
+  height: 190rpx;
+}
