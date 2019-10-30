@@ -1,1 +1,41 @@
 /**index.wxss**/
+
+.search {
+  height: 80rpx;
+  background: #eb4450;
+}
+
+.input {
+  /* 相对路径 */
+  position: relative;
+  text-align: center;
+  background: #fff;
+  font-size: 30rpx;
+  margin: 0 15rpx;
+  color: #bcbcbc;
+  border-radius: 4px;
+
+}
+
+.iconsearch {
+  position: absolute;
+  left: 300rpx;
+  top: 5rpx;
+  color: #bcbcbc;
+
+}
+
+/* 轮播图 */
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+/* 轮播图颜色 */
