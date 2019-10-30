@@ -4,12 +4,16 @@ import request from "../../utils/request.js"
 Page({
 
   data: {
+    //轮播图
     banners: [
 
     ],
+    //菜单导航
     menus: [
 
-    ]
+    ],
+    //楼层数据
+    floors:[]
   },
 
   onLoad() {
@@ -38,7 +42,19 @@ Page({
       })
     })
 
-    /* */
+    //数据楼层
+    request({
+      url:"/api/public/v1/home/floordata"
+    }).then(res=>{
+     // console.log(res,'3333')
+     const{message} = res.data;
+     console.log(message,'5555')
+     //赋值给floors
+     this.setData({
+       floors:message
+     })
+
+    })
 
 
   },
