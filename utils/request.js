@@ -53,6 +53,7 @@ const request = (config) => {
     wx.request({
       ...config,
       success(res){
+        //console.log(res)
         // 请求成功之后执行resolve，并且返回成功的结果
         resolve(res)
       },

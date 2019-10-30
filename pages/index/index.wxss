@@ -1,5 +1,5 @@
 /**index.wxss**/
-
+/* 搜索 */
 .search {
   height: 80rpx;
   background: #eb4450;
@@ -41,6 +41,10 @@
 }
 
 /* 轮播图*/
+.baner-image{
+  width: 100%;
+  height:100%;
+}
 
 /* 菜单列表样式 */
 
@@ -52,8 +56,8 @@
 }
 
 .menus image {
-  width: 100rpx;
-  height: 100rpx;
+  width: 128rpx;
+  height: 140rpx;
 }
 
 /* 楼层列表 */

@@ -6,7 +6,7 @@ App({
     // 展示本地存储能力
  
   //指定基准路径
-  request.defaults.baseURL = "https://api.zbztb.cn"
+    request.defaults.baseURL = "https://api.zbztb.cn"
   },
   globalData: {
   

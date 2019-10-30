@@ -11,7 +11,7 @@
   <!-- block不会渲染到页面上，只是用来循环 -->
   <block wx:for="{{banners}}" wx:key="{{index}}">
     <swiper-item>
-      <image src="{{item}}" mode="aspectFill"></image>
+      <image src="{{item.image_src}}" mode="aspectFill"></image>
     </swiper-item>
   </block>
 </swiper>
@@ -20,7 +20,7 @@
 <!-- 菜单列表 -->
 <view class="menus">
   <navigator url="" wx:for="{{menus}}" wx:key="{{index}}">
-    <image src="{{item}}"></image>
+    <image src="{{item.image_src}}"></image>
   </navigator>
 </view>
 <!-- 菜单列表结束 -->
@@ -40,7 +40,7 @@
 
   <!-- 右侧的四张小图 -->
   <view class="right">
-    <navigator url="" wx:for="{{ [1,2,3,4] }}">
+    <navigator url="" wx:for="{{ [1,2,3,4] }}"  wx:key="{{index}}">
       <image src="https://cdn.pinduoduo.com/home/static/img/subject/food.jpg"></image>
     </navigator>
   </view>
