@@ -38,4 +38,18 @@
 .page-section:last-child{
   margin-bottom: 0;
 }
-/* 轮播图颜色 */
+/* 轮播图*/
+
+
+/* 菜单列表样式 */
+.menus{
+   display: flex;
+   justify-content: space-around;
+   padding: 20rpx 0;
+ }
+
+  .menus image{
+   width: 100rpx;
+   height: 100rpx;
+ }
+ 
