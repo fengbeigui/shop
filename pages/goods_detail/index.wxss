@@ -93,6 +93,15 @@
   background: #fff;
   display: flex;
 }
+.contact{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100rpx;
+  /* 透明 */
+  opacity: 0;
+}
 
 .btn-left {
   width: 20%;
