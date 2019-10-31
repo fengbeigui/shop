@@ -1,0 +1,70 @@
+/* pages/goods_detail/index.wxss */
+
+.swiper {
+  height: 720rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 内容 */
+
+.goods-info {
+  padding: 20rpx;
+  border-bottom: 20rpx solid #eee;
+}
+
+/* 价格 */
+
+.goods-price {
+  color: red;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20rpx;
+}
+
+/* 标题 */
+
+.goods-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+/* 标题左边 */
+
+.goods-title-left {
+  flex: 1;
+  font-size: 14px;
+  /* 两行省略的方法 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 控制在2行 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* y右边星星 */
+
+.goods-star {
+  width: 100rpx;
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  /* 纵轴 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px #ddd solid;
+  margin-left: 20rpx;
+}
+
+/* 收藏 */
+
+.icon-shoucang {
+  color: #999;
+  font-size: 14px;
+}
