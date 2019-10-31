@@ -78,3 +78,8 @@
  font-weight: 700;
  color: red;
 }
+.loading{
+  padding: 20rpx;
+  color: #ccc;
+  text-align: center;
+}

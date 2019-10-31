@@ -10,7 +10,12 @@ Page({
     //页面传参数
     query: "",
     // 商品列表，接口请求回来的
-    goods: []
+    goods: [],
+    //是否有更多
+    hasMore: true,
+    //当前的也是
+    pagenum:1
+
   },
 
   /**
@@ -24,20 +29,26 @@ Page({
     } = options;
     //把数据传到到data中
     this.setData({
-      query: query
+      query
     })
 
+
     //请求列表数据
+    this.getList();
+  },
+
+  //请求列表数据
+  getList() {
     request({
       url: "/api/public/v1/goods/search",
       //ajax使用的是data; params使用的是axios
       data: {
-        query,
-        pagenum: 1,
+        query: this.data.query,
+        pagenum: this.data.pagenum,
         pagesize: 10
       }
     }).then(res => {
-      console.log(res.data, '8888')
+      //console.log(res.data, '8888')
       //goods是商品列表
       const {
         goods
@@ -48,55 +59,27 @@ Page({
         v.goods_price = Number(v.goods_price).toFixed(2);
         return v;
       })
-
-
       //数据存储到data
       this.setData({
-        goods: newGoods
+        //结构数组
+        goods: [...this.data.goods,...newGoods]
       })
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
 
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    //触底事件
+    //console.log(123) //到达底部触发打印
+    //请求下一位数据
+    this.setData({
+      pagenum:this.data.pagenum + 1
+    })
+      this.getList();
   },
 
   /**

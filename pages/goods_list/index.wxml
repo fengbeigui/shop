@@ -13,7 +13,10 @@
 </view>
 
 <!-- 可以循环的商品列表  navigator跳转标签包裹-->
-<navigator url="" class="goods-item" wx:for="{{goods}}" >
+<navigator url="" 
+class="goods-item" 
+wx:for="{{goods}}" 
+wx:key="{{index}}">
   <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
 
 
@@ -29,3 +32,8 @@
 
   </view>
 </navigator>
+
+<!-- 加载中提示，也可能是加载完毕 -->
+<view class="loading" wx:if="{{hasMore}}">正在加载...</view>
+
+<view class="loading" wx:if="{{!hasMore}}">我也是有底线的...</view>
