@@ -13,7 +13,7 @@
 </view>
 
 <!-- 可以循环的商品列表  navigator跳转标签包裹-->
-<navigator url="" 
+<navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}" 
 class="goods-item" 
 wx:for="{{goods}}" 
 wx:key="{{index}}">

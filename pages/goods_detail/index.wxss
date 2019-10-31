@@ -62,9 +62,14 @@
   margin-left: 20rpx;
 }
 
-/* 收藏 */
+/* 字体样式 */
 
 .icon-shoucang {
   color: #999;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.express{
+    color: #999;
   font-size: 14px;
 }

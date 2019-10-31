@@ -1,23 +1,21 @@
 <!--pages/goods_detail/index.wxml-->
 <!-- 轮播图 -->
 <swiper indicator-dots class="swiper">
-    <block wx:for="{{[1,1,1,1]}}" wx:key="{{index}}">
+    <block wx:for="{{detail.pics}}" wx:key="{{index}}">
       <swiper-item>
-          <image src="https://img.alicdn.com/imgextra/i3/2838892713/O1CN01j5Maal1Vub5j7tQ45_!!0-item_pic.jpg_60x60q90.jpg" mode="aspectFill">
+          <image src="{{item.pics_big}}" mode="aspectFill">
           </image>
       </swiper-item>
     </block>
 </swiper>
 
 <view class="goods-info">
-    <view class="goods-price">￥270</view>
+    <view class="goods-price">￥{{detail.goods_price}}</view>
 
     <!-- 标签部分 -->
     <view class="goods-title">
       <view class="goods-title-left">
-          和哦到哦安徽的哦豁到OA大哦啊哈达回到
-          和哦到哦安徽的哦豁到OA大哦啊哈达回到
-          和哦到哦安徽的哦豁到OA大哦啊哈达回到
+        {{detail.goods_name}}
       </view>
 
       <view class="goods-star">
@@ -25,4 +23,9 @@
           <text>收藏</text>
       </view>
     </view>
+
+    <view class="express">快递：免运费</view>
 </view>
+
+<!-- 商品详情, nodes相当于v-html的作用 -->
+ <rich-text nodes="{{detail.goods_introduce}}"></rich-text>
