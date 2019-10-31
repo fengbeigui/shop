@@ -22,7 +22,7 @@ Page({
     request({
       url: "/api/public/v1/categories"
     }).then(res => {
-      console.log(res, '打印的分页数据信息')
+      //console.log(res, '打印的分页数据信息')
       const { message } = res.data;
       this.setData({
         list: message

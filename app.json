@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/category/index",
     "pages/cart/index",
-    "pages/personal/index"
+    "pages/personal/index",
+    "pages/goods_list/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +14,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "selectedColor":"#ff2d4a",
+    "selectedColor": "#ff2d4a",
     "list": [
       {
         "pagePath": "pages/index/index",

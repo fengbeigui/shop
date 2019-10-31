@@ -21,7 +21,7 @@
       <view class="brands">
         <!-- <navigator></navigator> 相当于a标签 -->
         <!-- list[current].children list0 1 2 -->
-        <navigator url="" 
+        <navigator url="/pages/goods_list/index" 
         class="brand-item"         
         wx:for="{{item.children}}" 
         wx:key="{{index}}">

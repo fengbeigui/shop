@@ -1,0 +1,34 @@
+<!--pages/goods_list/index.wxml-->
+<!-- 搜索 -->
+<view class="search">
+  <input class="input" placeholder="小米"></input>
+  <view class="iconfont iconsearch"></view>
+</view>
+
+<!-- 综合 -->
+<view class="goods-sort">
+  <view class="active">综合</view>
+  <view>销量</view>
+  <view>价格</view>
+</view>
+
+<!-- 可以循环的商品列表  navigator跳转标签包裹-->
+<navigator url="" class="goods-item">
+  <image src="https://img.alicdn.com/imgextra/i4/2838892713/O1CN01AlrkOU1Vub2JDWgXM_!!2838892713.jpg_430x430q90.jpg" mode="aspectFill"></image>
+
+
+  <!-- 右边 -->
+  <view class="goods-item-right">
+    <view class="goods-title">
+      随便一些内容，哈哈哈哈随便一些内容，哈哈哈哈
+      随便一些内容，哈哈哈哈
+      随便一些内容，哈哈哈哈
+      随便一些内容，哈哈哈哈
+    </view>
+
+    <view class="goods-price">
+      ￥99.00
+    </view>
+
+  </view>
+</navigator>

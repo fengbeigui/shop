@@ -1,0 +1,80 @@
+/* pages/goods_list/index.wxss */
+.search{    
+    height: 100rpx;    
+    background: #eee;
+    padding: 10px;
+    /* 內减模式 */
+    box-sizing:border-box;
+}
+.input{
+  height: 60rpx;
+  background: #fff;
+  margin: 0 5px;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 50rpx;
+  position: relative;
+  
+}
+.iconsearch{
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  color: #eee;
+
+}
+/* 综合 */
+.goods-sort{
+  display: flex;
+  padding: 20rpx;
+  /* 项目位于各行之前、之间、之后都留有空白的容器内。 */
+  justify-content: space-around;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+
+}
+.active{
+  color: red;
+}
+/* 可以循环的商品列表 */ 
+.goods-item{
+   /*  首先记得flex布局 */
+   display: flex;
+   justify-content: space-between;
+    padding: 20rpx;
+    border-bottom: 1px solid #eee;
+   
+}
+/* 图片 */
+.goods-item image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.goods-item-right{
+  /* 把剩余空间给右边*/
+  flex: 1;
+  padding-left: 20px;
+  display: flex;
+  /* 灵活的项目将垂直显示，正如一个列一样 */
+  flex-direction: column;
+  /* 向两边对齐 */
+  justify-content: space-between;
+}
+.goods-title{
+   font-size: 14px;
+   /* 两行省略的方法 */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   /* 控制在2行 */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+
+
+}
+.goods-price{
+ font-size: 18px;
+ font-weight: 700;
+ color: red;
+}
