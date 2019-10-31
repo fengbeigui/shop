@@ -1,31 +1,50 @@
 <!--pages/goods_detail/index.wxml-->
 <!-- 轮播图 -->
 <swiper indicator-dots class="swiper">
-    <block wx:for="{{detail.pics}}" wx:key="{{index}}">
-      <swiper-item>
-          <image src="{{item.pics_big}}" mode="aspectFill">
-          </image>
-      </swiper-item>
-    </block>
+  <block wx:for="{{detail.pics}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item.pics_big}}" mode="aspectFill">
+      </image>
+    </swiper-item>
+  </block>
 </swiper>
 
 <view class="goods-info">
-    <view class="goods-price">￥{{detail.goods_price}}</view>
+  <view class="goods-price">￥{{detail.goods_price}}</view>
 
-    <!-- 标签部分 -->
-    <view class="goods-title">
-      <view class="goods-title-left">
-        {{detail.goods_name}}
-      </view>
-
-      <view class="goods-star">
-          <view class="iconfont icon-shoucang"></view>
-          <text>收藏</text>
-      </view>
+  <!-- 标签部分 -->
+  <view class="goods-title">
+    <view class="goods-title-left">
+      {{detail.goods_name}}
     </view>
 
-    <view class="express">快递：免运费</view>
+    <view class="goods-star">
+      <view class="iconfont icon-shoucang"></view>
+      <text>收藏</text>
+    </view>
+  </view>
+
+  <view class="express">快递：免运费</view>
 </view>
 
 <!-- 商品详情, nodes相当于v-html的作用 -->
- <rich-text nodes="{{detail.goods_introduce}}"></rich-text>
+<rich-text nodes="{{detail.goods_introduce}}" class="richtext"></rich-text>
+
+<!-- 底部按钮 -->
+<view class="footer">
+  <view class="btn-left">
+    <view class='iconfont icon-kefu'></view>
+    <view>联系客服</view>
+  </view>
+  <navigator url="/pages/cart/index" open-type="switchTab" class="btn-left">
+    <view class='iconfont icon-gouwuche'></view>
+    <view>购物车</view>
+  </navigator>
+
+  <view class="btn-right">
+    加入购物车
+  </view>
+  <view class="btn-right">
+    立即购买
+  </view>
+</view>
