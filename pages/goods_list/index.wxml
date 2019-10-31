@@ -1,7 +1,7 @@
 <!--pages/goods_list/index.wxml-->
 <!-- 搜索 -->
 <view class="search">
-  <input class="input" placeholder="小米"></input>
+  <input class="input" placeholder="{{query}}"></input>
   <view class="iconfont iconsearch"></view>
 </view>
 
@@ -13,21 +13,18 @@
 </view>
 
 <!-- 可以循环的商品列表  navigator跳转标签包裹-->
-<navigator url="" class="goods-item">
-  <image src="https://img.alicdn.com/imgextra/i4/2838892713/O1CN01AlrkOU1Vub2JDWgXM_!!2838892713.jpg_430x430q90.jpg" mode="aspectFill"></image>
+<navigator url="" class="goods-item" wx:for="{{goods}}" >
+  <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
 
 
   <!-- 右边 -->
   <view class="goods-item-right">
     <view class="goods-title">
-      随便一些内容，哈哈哈哈随便一些内容，哈哈哈哈
-      随便一些内容，哈哈哈哈
-      随便一些内容，哈哈哈哈
-      随便一些内容，哈哈哈哈
+        {{item.goods_name}}
     </view>
 
     <view class="goods-price">
-      ￥99.00
+      ￥{{item.goods_price}}
     </view>
 
   </view>

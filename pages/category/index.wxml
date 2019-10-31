@@ -21,7 +21,8 @@
       <view class="brands">
         <!-- <navigator></navigator> 相当于a标签 -->
         <!-- list[current].children list0 1 2 -->
-        <navigator url="/pages/goods_list/index" 
+        <!-- 带页面参数 自定义query  等于标题{{item.cat_name}}-->
+        <navigator url="/pages/goods_list/index?query={{item.cat_name}}" 
         class="brand-item"         
         wx:for="{{item.children}}" 
         wx:key="{{index}}">
