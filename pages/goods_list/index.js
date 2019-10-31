@@ -14,7 +14,8 @@ Page({
     //是否有更多
     hasMore: true,
     //当前的也是
-    pagenum:1
+    pagenum: 1,
+
 
   },
 
@@ -54,6 +55,14 @@ Page({
         goods
       } = res.data.message;
 
+
+      //判断是否到最后一页
+      if (goods.length < 10) {
+        this.setData({
+          hasMore: false
+        })
+      }
+
       //需要循环处理下价格(map),number下有个toFixed方法
       const newGoods = goods.map(v => {
         v.goods_price = Number(v.goods_price).toFixed(2);
@@ -61,8 +70,8 @@ Page({
       })
       //数据存储到data
       this.setData({
-        //结构数组
-        goods: [...this.data.goods,...newGoods]
+        //结构数组,合并数组
+        goods: [...this.data.goods, ...newGoods]
       })
     })
   },
@@ -75,11 +84,14 @@ Page({
   onReachBottom: function() {
     //触底事件
     //console.log(123) //到达底部触发打印
-    //请求下一位数据
-    this.setData({
-      pagenum:this.data.pagenum + 1
-    })
+
+    if (this.data.hasMore) {
+      //请求下一位数据
+      this.setData({
+        pagenum: this.data.pagenum + 1
+      })
       this.getList();
+    }
   },
 
   /**
