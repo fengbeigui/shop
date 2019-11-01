@@ -3,10 +3,7 @@
 <view class="search-total">
   <view class="search-input">
     <icon type="search" size="14"></icon>
-    <input class="shuru" placeholder="请输入你想要的商品" bindinput="handleInput"
-    value="{{searchValue}}"
-    bindconfirm="handleFirm"
-    ></input>
+    <input class="shuru" placeholder="请输入你想要的商品" bindinput="handleInput" value="{{searchValue}}" bindconfirm="handleFirm"></input>
   </view>
   <view class="quxiao" wx:if="{{showCancel}}" bindtap="handleQuxiao">取消</view>
 </view>
@@ -14,16 +11,17 @@
 <!-- 标题 -->
 <view class="h2">
   <view>历史搜索</view>
-  <icon type="clear" size="14"></icon>
+  <icon type="clear" size="14" bindtap="handleClear"></icon>
 </view>
 
 <!-- 历史搜索 -->
 <view class="history">
-  <view class="history-item">
-    小米
-  </view>
-  <view class="history-item">
-    小米哦几大哦啊单
-  </view>
+  <navigator 
+  class="history-item" 
+  wx:for="{{keyword}}" 
+  wx:key="{{index}}" 
+  url="/pages/goods_list/index?query={{item}}">
+    {{item}}
+  </navigator>
 
 </view>

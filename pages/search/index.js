@@ -8,14 +8,22 @@ Page({
     //是否显示取消按钮
     showCancel:false,
     //输入框的值
-    searchValue:""
+    searchValue:"",
+    //搜索历史列表
+    keyword:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      //
+    const arr = wx.getStorageSync('search') || [];
 
+    this.setData({
+      keyword:arr
+    })
   },
 
   //监听输入框，输入时候的事件
@@ -65,12 +73,19 @@ Page({
     //保存到本地
     wx.setStorageSync('search', arr)
 
-    //转到搜索列表先
-    wx.navigateTo({
-      url:"/pages/goods_list/index?query="+this.data.searchValue
+    // //转到搜索列表先
+    // wx.navigateTo({
+    //   url:"/pages/goods_list/index?query="+this.data.searchValue
+    // })
+  },
+  //清除所有本地的数据
+  handleClear(){
+    wx.removeStorageSync('search');
+
+    this.setData({
+      keyword:[]
     })
   },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
