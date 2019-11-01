@@ -51,6 +51,27 @@ Page({
       searchValue:""
     })
   },
+  //点击键盘右下角确定按钮时候触发
+  handleFirm(){
+    //打印输入框的值
+    //console.log(this.data,'666')
+    //console.log(this.data.searchValue)
+    //先从本地存储拿出来数组，没有的等于空的数组
+    const arr = wx.getStorageSync('search') || []
+
+    //判断本地是否有数据，有的话就追加unshift
+    arr.unshift(this.data.searchValue)
+    
+    //保存到本地
+    wx.setStorageSync('search', arr)
+
+    //转到搜索列表先
+    wx.navigateTo({
+      url:"/pages/goods_list/index?query="+this.data.searchValue
+    })
+  },
+
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

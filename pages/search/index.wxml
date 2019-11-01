@@ -5,6 +5,7 @@
     <icon type="search" size="14"></icon>
     <input class="shuru" placeholder="请输入你想要的商品" bindinput="handleInput"
     value="{{searchValue}}"
+    bindconfirm="handleFirm"
     ></input>
   </view>
   <view class="quxiao" wx:if="{{showCancel}}" bindtap="handleQuxiao">取消</view>
