@@ -1,0 +1,68 @@
+/* pages/search/index.wxss */
+
+/* 搜索头部 */
+
+.search-total {
+  /* 行转块 */
+  display: flex;
+  padding: 20rpx;
+  height: 62rpx;
+  background: #eee;
+}
+
+/* 左边输入框 */
+
+.search-input {
+  background: #fff;
+  /* 行转块 意思两行转成两块会在一排*/
+  display: flex;
+  justify-content: space-between;
+  /* 水平居中 */
+  align-items: center;
+  height: 60rpm;
+  flex: 1;
+  margin-right: 20rpx;
+  padding: 0 20rpx;
+  border-radius: 4px;
+}
+
+/* 搜索图标 */
+
+/* 字体改不了，在wxml下改了 */
+
+.shuru {
+  /* 把剩余空间分配它 */
+  flex: 1;
+  font-size: 14px;
+  padding-left: 20rpx;
+}
+
+.quxiao {
+  width: 120rpx;
+  line-height: 60rpx;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+}
+/* 历史搜索 注意细节class前面有点 */
+.h2{
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+clear{
+
+}
+.history{
+  padding: 20px;
+  display: flex;
+  /* 换行 */
+  flex-wrap: wrap;
+}
+.history-item{
+background: #eee;
+margin: 20rpx 10rpx;
+padding: 3px 10px;
+}

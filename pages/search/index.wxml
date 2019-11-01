@@ -1,0 +1,26 @@
+<!--pages/search/index.wxml-->
+<!-- 搜索 -->
+<view class="search-total">
+  <view class="search-input">
+    <icon type="search" size="14"></icon>
+    <input class="shuru" placeholder="请输入你想要的商品"></input>
+  </view>
+  <view class="quxiao">取消</view>
+</view>
+
+<!-- 标题 -->
+<view class="h2">
+  <view>历史搜索</view>
+  <icon type="clear" size="14"></icon>
+</view>
+
+<!-- 历史搜索 -->
+<view class="history">
+  <view class="history-item">
+    小米
+  </view>
+  <view class="history-item">
+    小米哦几大哦啊单
+  </view>
+
+</view>
