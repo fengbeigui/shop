@@ -67,6 +67,13 @@
 					"pathName": "pages/search/index",
 					"query": "goods_id=57444",
 					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/personal/index",
+					"pathName": "pages/personal/index",
+					"query": "goods_id=57444",
+					"scene": null
 				}
 			]
 		}

@@ -1,1 +1,166 @@
 /* pages/cart/index.wxss */
+
+.title {
+  display: flex;
+  height: 150rpx;
+  line-height: 150rpx;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.shouhuoren {
+  display: flex;
+}
+
+.name {
+  padding-left: 40rpx;
+}
+
+.title-right {
+  margin-left: 60rpx;
+}
+
+/* 收货地址 */
+
+/* 条杠 */
+
+.title-img {
+  margin: 30rpx 0;
+}
+
+.title-img image {
+  height: 20rpx;
+}
+
+/* 优购生活馆 */
+
+.yougou {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.yougou text {
+  font-size: 18px;
+  padding-left: 5px;
+}
+
+/* 详情 */
+
+.particulars {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  height: 240rpx;
+}
+
+.particula-left {
+  width: 300rpx;
+  display: flex;
+}
+
+.particula-left icon {
+  width: 62rpx;
+  line-height: 240rpx;
+}
+
+.particula-left image {
+  width: 180rpx;
+  height: 100%;
+}
+
+.particula-right {
+  display: 1;
+}
+
+.par-title {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.par-botton {
+  display: flex;
+  margin-top: 50rpx;
+}
+
+.par-price {
+  color: red;
+  font-size: 20px;
+}
+
+.par-price>text:nth-child(2) {
+  font-size: 14px;
+}
+
+.jian {
+  border: 3px solid #ccc;
+  width: 60rpx;
+  height: 50rpx;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.jia {
+  border: 3px solid #ccc;
+  width: 60rpx;
+  height: 50rpx;
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* 全选 */
+
+.quanxuan {
+  border-top: 60rpx solid #ccc;
+  height: 120rpx;
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.quanxuan-left>icon {
+  height: 100%;
+  line-height: 51px;
+}
+
+.quanxuan-left>text {
+  font-size: 16px;
+  line-height: 120rpx;
+  margin-left: 10px;
+}
+
+.quanxuan-center {
+  margin-top: 5px;
+}
+
+.heji {
+  margin-right: 5px;
+}
+
+.heji>text {
+  color: red;
+}
+
+.heji>text:nth-child(2) {
+  font-size: 13px;
+}
+.quanxuan-center>view:nth-child(2) {
+  font-size: 14px;
+  color: #c4c4c4;
+}
+.quanxuan-right {
+ 
+}
+.quanxuan-right>button {
+  background: #eb4450;
+  color: #fbe4e8;
+  height: 51px;
+}

@@ -1,2 +1,69 @@
 <!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="title">
+  <view class="shouhuoren">
+    收货人:
+    <view class="name">苏</view>
+  </view>
+
+  <view class="phone">13535337057
+    <text class="title-right">></text>
+  </view>
+
+</view>
+<!-- 收货地址 -->
+<view>
+  <text>收货地址：</text>
+  <text>广东省广州市天河区珠吉路</text>
+</view>
+<view class="title-img">
+  <image src="/images/cart_border@2x.png">
+  </image>
+</view>
+<!-- 优购生活馆 -->
+<view class="yougou">
+  <view class="iconfont icon-dianpu ziti"> </view>
+  <text>优购生活馆</text>
+</view>
+<!-- 信息列表 -->
+<view class="particulars">
+  <view class="particula-left">
+    <icon color="red" type="success" size="16" />
+    <image src="https://img12.360buyimg.com/mobilecms/s140x140_jfs/t1/70786/3/2218/143758/5d0887c6E47812c2a/a3c7fc6255d28bde.jpg.webp"></image>
+  </view>
+
+  <view class="particula-right">
+    <view class="par-title">
+      （2019新版）梁羽生作品集 龙凤宝钗缘（28-29）（套装共2册）梁羽生作品集 龙凤宝钗缘
+    </view>
+    <view class="par-botton">
+      <view class="par-price">
+        <text>￥279.</text>
+        <text>00</text>
+      </view>
+
+      <view class="jian">-</view>
+      <text>30</text>
+      <view class="jia">+</view>
+
+    </view>
+  </view>
+</view>
+
+<!-- 全选 -->
+<view class="quanxuan">
+  <view class="quanxuan-left">
+    <icon color="red" type="success" size="16" />
+    <text>全选</text>
+  </view>
+  <view class="quanxuan-center">
+    <view class="heji">合计:
+      <text>￥14110.</text>
+      <text>00</text>
+    </view>
+    <view>包含运费</view>
+
+  </view>
+  <view class="quanxuan-right">
+    <button>结算(3)</button>
+  </view>
+</view>
