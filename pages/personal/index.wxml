@@ -1,2 +1,67 @@
 <!--pages/personal/index.wxml-->
-<text>pages/personal/index.wxml</text>
+<!-- 头部 -->
+<view class="title">
+  <icon class="iconfont icon-icon_set_up "></icon>
+  <image src="/images/cart_empty@2x.png"></image>
+  <icon class="iconfont icon-dakaihuihua "></icon>
+</view>
+<view class="info">
+  轻松登录/注册
+</view>
+
+
+<view class="info-lan">
+  <view class="info-mokuai">
+    <text>0</text>
+    <text>收藏的店铺</text>
+  </view>
+  <view class="info-mokuai">
+    <text>0</text>
+    <text>收藏的店铺</text>
+  </view>
+  <view class="info-mokuai">
+    <text>0</text>
+    <text>收藏的店铺</text>
+  </view>
+  <view class="info-mokuai">
+    <text>0</text>
+    <text>收藏的店铺</text>
+  </view>
+</view>
+
+<!-- 我的订单 -->
+<view class="indent">我的订单</view>
+<view class="fukuan-infos">
+  <view fukuan-info>
+    <view class="iconfont icon-daifukuan  daifukuan"></view>
+    <text>代付款</text>
+  </view>
+  <view fukuan-info>
+    <view class="iconfont icon-icon3 daifukuan"></view>
+    <text>代收货</text>
+  </view>
+  <view fukuan-info>
+    <view class="iconfont icon-icon5 daifukuan"></view>
+    <text>退款/退货</text>
+  </view>
+  <view fukuan-info>
+    <view class="iconfont icon-icon_order daifukuan"></view>
+    <text>全部订单</text>
+  </view>
+
+</view>
+<!-- 收货地址 -->
+<view class="shouhuo">
+  <view class="shouhuo-left">收货地址</view>
+  <view>></view>
+</view>
+<!-- 联系客服 -->
+<view class="kefu">
+    <view class="kefu01">
+        <text>联系客服</text>
+         <text>400-618-4000</text>
+    </view>
+    <view class="kefu02">
+    <text>意见反馈</text>
+    </view>
+</view>

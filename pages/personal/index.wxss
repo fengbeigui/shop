@@ -1,1 +1,117 @@
 /* pages/personal/index.wxss */
+
+.title {
+  display: flex;
+  justify-content: center;
+  background: #eb4450;
+}
+
+.title>image {
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  margin: 0 20px;
+}
+
+.title>icon {
+  line-height: 53px;
+  color: #fbe3e6;
+}
+
+/* 轻松登录 */
+
+
+.info {
+  display: flex;
+  justify-content: center;
+  background: #eb4450;
+  padding-top: 20rpx;
+  padding-bottom: 100rpx;
+  color: #fbe3e6;
+}
+/* 背景 */
+page{
+  background: #f4f4f4;
+}
+
+.info-lan {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.info-mokuai {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.info-mokuai>text:nth-child(2) {
+  font-size: 14px;
+}
+
+/* 我的订单 */
+
+.indent {
+  height: 50px;
+  border: 1px solid #eee;
+  margin: 0 10px;
+  line-height: 50px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.fukuan-infos {
+  display: flex;
+  background: #ffffff;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.fukuan-info {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.daifukuan {
+  text-align: center;
+  color: red;
+  font-size: 28px;
+}
+
+.fukuan-infos text {
+  font-size: 14px;
+}
+/* 收货地址 */
+.shouhuo{
+  display: flex;
+  justify-content: space-between;
+   margin:  10px;
+   background: #ffffff;
+   height: 40px;
+   line-height: 40px;
+   padding: 0 10px;
+   box-sizing: border-box;
+}
+/* 联系客服 */
+.kefu{
+  margin: 0 10px;
+  background: #ffffff;
+}
+.kefu01,.kefu02{
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  line-height: 52px;
+  border-bottom: 1px solid #eee;
+  padding:0 10px;
+  
+}
