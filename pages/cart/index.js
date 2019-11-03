@@ -7,6 +7,8 @@ Page({
   data: {
     //收货地址
     address: {},
+    //购物车商品列表
+    goods:null
   },
   //获取收货地址
   // 获取收货地址
@@ -25,5 +27,15 @@ Page({
       }
     })
   },
+  onShow(){
+    //每次打开页面时候都在本地获取购物车的数据
+    //这方法是开微信官方文档获取
+    const goods = wx.getStorageSync("goods") || null;
+
+    console.log(goods,'打印本地获取购物车的数据')
+    this.setData({
+      goods
+    })
+  }
 
 })

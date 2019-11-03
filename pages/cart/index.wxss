@@ -7,13 +7,14 @@
   justify-content: space-between;
   padding: 0 10px;
 }
-.address-bar{
-   padding:20px 10px;
-   display: flex;
-   justify-content: space-between;
 
+.address-bar {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
 }
-.shouhuodizi{
+
+.shouhuodizi {
   padding-left: 10px;
 }
 
@@ -59,13 +60,16 @@
 }
 
 /* 详情 */
-
+.goods-list{
+  margin-bottom: 100rpx;
+}
 .particulars {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #eee;
   height: 240rpx;
+ 
 }
 
 .particula-left {
@@ -88,7 +92,7 @@
 }
 
 .par-title {
-  font-size: 18px;
+  font-size: 14px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -129,15 +133,15 @@
 /* 全选 */
 
 .quanxuan {
- background: #ffffff;
- z-index: 99;
+  background: #fff;
+  z-index: 99;
   height: 120rpx;
   padding-left: 5px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   /* 固定定位 */
-  position:fixed;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -169,15 +173,22 @@
 .heji>text:nth-child(2) {
   font-size: 13px;
 }
+
 .quanxuan-center>view:nth-child(2) {
   font-size: 14px;
   color: #c4c4c4;
 }
+
 .quanxuan-right {
- 
 }
+
 .quanxuan-right>button {
   background: #eb4450;
   color: #fbe4e8;
   height: 51px;
+}
+
+.par-botton>input {
+  width: 40px;
+  text-align: center;
 }

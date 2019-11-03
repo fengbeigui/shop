@@ -31,30 +31,34 @@
   <text>优购生活馆</text>
 </view>
 <!-- 信息列表 -->
-<view class="particulars">
-  <view class="particula-left">
-    <icon color="red" type="success" size="16" />
-    <image src="https://img12.360buyimg.com/mobilecms/s140x140_jfs/t1/70786/3/2218/143758/5d0887c6E47812c2a/a3c7fc6255d28bde.jpg.webp"></image>
-  </view>
-
-  <view class="particula-right">
-    <view class="par-title">
-      （2019新版）梁羽生作品集 龙凤宝钗缘（28-29）（套装共2册）梁羽生作品集 龙凤宝钗缘
-    </view>
-    <view class="par-botton">
-      <view class="par-price">
-        <text>￥279.</text>
-        <text>00</text>
+<!-- 购物车为空 -->
+<view  wx:if="{{!goods}}" class="empty">购物车为空</view>
+<!-- 购物车有数据 -->
+<view class="goods-list" wx:if="{{goods}}">
+    <view class="particulars" wx:for="{{goods}}" wx:key="{{index}}">
+      <view class="particula-left" >
+        <icon color="red" type="success" size="16" />
+        <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
       </view>
 
-      <view class="jian">-</view>
-      <text>30</text>
-      <view class="jia">+</view>
+      <view class="particula-right">
+        <view class="par-title">
+            {{item.goods_name}}
+        </view>
+        <view class="par-botton">
+          <view class="par-price">
+            <text>￥{{item.goods_price}}</text>
+            
+          </view>
 
+          <view class="jian">-</view>
+          <input value="{{ item.number }}"></input>
+          <view class="jia">+</view>
+
+        </view>
+      </view>
     </view>
-  </view>
 </view>
-
 
 <!-- 全选 -->
 <view class="quanxuan">
