@@ -24,7 +24,7 @@ Page({
         goods_id
       }
     }).then(res=>{
-      console.log(res,'555')
+      //console.log(res,'555')
       const{message} = res.data;
 
       //detail是商品详情

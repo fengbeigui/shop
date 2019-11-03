@@ -1,5 +1,11 @@
 <!--pages/cart/index.wxml-->
-<view class="title">
+<!-- 没有收获地址时候 -->
+<view class="address-bar" >
+    <view>获取收获地址</view>
+    <text class="title-right">></text>
+</view>
+<!-- 有收获地址的时候 -->
+<view class="title" wx:if="{{false}}">
   <view class="shouhuoren">
     收货人:
     <view class="name">苏</view>
@@ -10,8 +16,9 @@
   </view>
 
 </view>
+
 <!-- 收货地址 -->
-<view>
+<view class="shouhuodizi">
   <text>收货地址：</text>
   <text>广东省广州市天河区珠吉路</text>
 </view>
@@ -25,7 +32,55 @@
   <text>优购生活馆</text>
 </view>
 <!-- 信息列表 -->
-<view class="particulars">
+<view class="particulars" >
+  <view class="particula-left">
+    <icon color="red" type="success" size="16" />
+    <image src="https://img12.360buyimg.com/mobilecms/s140x140_jfs/t1/70786/3/2218/143758/5d0887c6E47812c2a/a3c7fc6255d28bde.jpg.webp"></image>
+  </view>
+
+  <view class="particula-right">
+    <view class="par-title">
+      （2019新版）梁羽生作品集 龙凤宝钗缘（28-29）（套装共2册）梁羽生作品集 龙凤宝钗缘
+    </view>
+    <view class="par-botton">
+      <view class="par-price">
+        <text>￥279.</text>
+        <text>00</text>
+      </view>
+
+      <view class="jian">-</view>
+      <text>30</text>
+      <view class="jia">+</view>
+
+    </view>
+  </view>
+</view>
+<!-- 2 -->
+<view class="particulars" >
+  <view class="particula-left">
+    <icon color="red" type="success" size="16" />
+    <image src="https://img12.360buyimg.com/mobilecms/s140x140_jfs/t1/70786/3/2218/143758/5d0887c6E47812c2a/a3c7fc6255d28bde.jpg.webp"></image>
+  </view>
+
+  <view class="particula-right">
+    <view class="par-title">
+      （2019新版）梁羽生作品集 龙凤宝钗缘（28-29）（套装共2册）梁羽生作品集 龙凤宝钗缘
+    </view>
+    <view class="par-botton">
+      <view class="par-price">
+        <text>￥279.</text>
+        <text>00</text>
+      </view>
+
+      <view class="jian">-</view>
+      <text>30</text>
+      <view class="jia">+</view>
+
+    </view>
+  </view>
+</view>
+<!-- 3 -->
+<view class="particulars" >
   <view class="particula-left">
     <icon color="red" type="success" size="16" />
     <image src="https://img12.360buyimg.com/mobilecms/s140x140_jfs/t1/70786/3/2218/143758/5d0887c6E47812c2a/a3c7fc6255d28bde.jpg.webp"></image>
