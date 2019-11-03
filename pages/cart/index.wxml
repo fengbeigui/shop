@@ -62,8 +62,8 @@
 
 <!-- 全选 -->
 <view class="quanxuan">
-  <view class="quanxuan-left">
-    <icon color="red" type="success" size="16" />
+  <view class="quanxuan-left" bindtap="handleAllSelectedEvent">
+    <icon color="{{ allSelected ? 'red' : 'gray' }}" type="success" size="16" />
     <text>全选</text>
   </view>
   <view class="quanxuan-center">
