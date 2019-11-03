@@ -74,7 +74,7 @@
     <view>包含运费</view>
 
   </view>
-  <view class="quanxuan-right">
+  <view class="quanxuan-right"  bindtap="handleSubmit">
     <button>结算(3)</button>
   </view>
 </view>
