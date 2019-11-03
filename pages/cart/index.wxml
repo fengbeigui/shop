@@ -68,7 +68,7 @@
   </view>
   <view class="quanxuan-center">
     <view class="heji">合计:
-      <text>￥14110.</text>
+      <text>￥{{allPrice}}.</text>
       <text>00</text>
     </view>
     <view>包含运费</view>

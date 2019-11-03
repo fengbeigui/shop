@@ -8,7 +8,9 @@ Page({
     //收货地址
     address: {},
     //购物车商品列表
-    goods: null
+    goods: null,
+    //总价格
+    allPrice:0
   },
   //获取收货地址
   // 获取收货地址
@@ -36,6 +38,8 @@ Page({
     this.setData({
       goods
     })
+    //计算总价格
+    this.handleAllPrice();
   },
   //数量减1
   handleReduce(event) {
@@ -64,7 +68,10 @@ Page({
             })
             //保存到本地
             wx.setStorageSync("goods", goods)
+            //计算总价格
+            this.handleAllPrice();
           }
+
         }
       })
     } else {
@@ -76,6 +83,8 @@ Page({
       })
       //保存到本地
       wx.setStorageSync("goods", goods)
+      //计算总价格
+      this.handleAllPrice();
     }
   },
   //检测是否有小数点并取整,禁止输入了小数点
@@ -94,7 +103,7 @@ Page({
     });
   },
   //输入框输入数量
-  bindChange() {
+  bindChange(event) {
     //获取输入框的值
     const value = +event.detail.value;
     const {id} = event.target.dataset;
@@ -109,6 +118,8 @@ Page({
     });
     //保存到本地
     wx.setStorageSync("goods", goods);
+    //计算总价格
+    this.handleAllPrice();
   },
   //数量加1
   handleAdd(event) {
@@ -131,6 +142,8 @@ Page({
     })
     //保存到本地
     wx.setStorageSync("goods", goods)
+    //计算总价格
+    this.handleAllPrice();
   },
 
   //选中状态取反
@@ -145,6 +158,26 @@ Page({
     });
     //保存到本地
     wx.setStorageSync("goods", goods)
+    //计算总价格
+    this.handleAllPrice();
+  },
+
+    // 注意小程序没有computed属性，所以需要封装计算总价格的函数
+  handleAllPrice(){
+    const {goods} = this.data;
+    let price = 0;
+
+    //开始计算 v就是key 也就是商业id
+    Object.keys(goods).forEach(v=>{
+      //当前商业必须是选中的
+      if(goods[v].selected){
+        //单价乘以数量 ,//下面这个打错会显示null
+        price += (goods[v].goods_price * goods[v].number)
+      }
+    })
+    this.setData({
+      allPrice:price
+    })
   }
 
 })
