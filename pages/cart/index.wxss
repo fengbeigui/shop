@@ -11,6 +11,7 @@
    padding:20px 10px;
    display: flex;
    justify-content: space-between;
+
 }
 .shouhuodizi{
   padding-left: 10px;
@@ -49,6 +50,7 @@
   line-height: 100rpx;
   padding: 0 10px;
   border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 .yougou text {
