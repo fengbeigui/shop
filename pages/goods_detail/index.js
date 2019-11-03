@@ -14,7 +14,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     // 获取id
     const {
       goods_id
@@ -41,28 +41,28 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
   //添加到本地的购物车
@@ -77,8 +77,8 @@ Page({
       goods_price
     } = this.data.detail;
 
-    // 判断商品是否已经在购物车中
-
+    // 判断商品是否已经在购物车中,判断他的id
+    const number = goods[goods_id] ? goods[goods_id].number + 1 : 1
 
     // 前面四个属性是商品详情提供的（需要在购物车页面中渲染）
     // number和selected属性是自己定义给购物车页面使用的
@@ -89,11 +89,11 @@ Page({
       goods_small_logo,
       goods_price,
 
-      number: 1,
+      number: number,
       selected: true
     }
     //保存到本地
-    wx.setStorageSync("goods",goods)
+    wx.setStorageSync("goods", goods)
   }
 
 })
