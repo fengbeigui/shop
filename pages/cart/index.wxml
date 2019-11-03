@@ -1,6 +1,6 @@
 <!--pages/cart/index.wxml-->
 <!-- 没有收获地址时候 -->
-<view class="address-bar"  bindtap="handleAddress" wx:if="{{!address.userName}}">
+<view class="address-bar" bindtap="handleAddress" wx:if="{{!address.userName}}">
   <view>获取收获地址</view>
   <text class="title-right">></text>
 </view>
@@ -32,36 +32,32 @@
 </view>
 <!-- 信息列表 -->
 <!-- 购物车为空 -->
-<view  wx:if="{{!goods}}" class="empty">购物车为空</view>
+<view wx:if="{{!goods}}" class="empty">购物车为空</view>
 <!-- 购物车有数据 -->
 <view class="goods-list" wx:if="{{goods}}">
-    <view class="particulars" wx:for="{{goods}}" wx:key="{{index}}">
-      <view class="particula-left" >
-        <icon color="red" type="success" size="16" />
-        <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
+  <view class="particulars" wx:for="{{goods}}" wx:key="{{index}}">
+    <view class="particula-left">
+      <icon color="{{ item.selected ? 'red': 'gray' }}" bindtap="handleSelected" data-id="{{ item.goods_id }}" type="success" size="16" />
+      <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
+    </view>
+
+    <view class="particula-right">
+      <view class="par-title">
+        {{item.goods_name}}
       </view>
-
-      <view class="particula-right">
-        <view class="par-title">
-            {{item.goods_name}}
-        </view>
-        <view class="par-botton">
-          <view class="par-price">
-            <text>￥{{item.goods_price}}</text>
-            
-          </view>
-
-          <view class="jian" bindtap="handleReduce" data-id="{{item.goods_id}}">-</view>
-          <input value="{{ item.number }}" 
-          bindchange="bindchange"
-             bindinput="bindInput" 
-             type="tel"
-          data-id="{{item.goods_id}}"></input>
-          <view class="jia" bindtap="handleAdd" data-id="{{item.goods_id}}">+</view>
+      <view class="par-botton">
+        <view class="par-price">
+          <text>￥{{item.goods_price}}</text>
 
         </view>
+
+        <view class="jian" bindtap="handleReduce" data-id="{{item.goods_id}}">-</view>
+        <input value="{{ item.number }}" bindchange="bindchange" bindinput="bindInput" type="tel" data-id="{{item.goods_id}}"></input>
+        <view class="jia" bindtap="handleAdd" data-id="{{item.goods_id}}">+</view>
+
       </view>
     </view>
+  </view>
 </view>
 
 <!-- 全选 -->
