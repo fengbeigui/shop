@@ -51,9 +51,9 @@
             
           </view>
 
-          <view class="jian">-</view>
-          <input value="{{ item.number }}"></input>
-          <view class="jia">+</view>
+          <view class="jian" bindtap="handleReduce" data-id="{{item.goods_id}}">-</view>
+          <input value="{{ item.number }}" bindinput="handleInput" data-id="{{item.goods_id}}"></input>
+          <view class="jia" bindtap="handleAdd" data-id="{{item.goods_id}}">+</view>
 
         </view>
       </view>

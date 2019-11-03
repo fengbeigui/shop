@@ -36,6 +36,32 @@ Page({
     this.setData({
       goods
     })
+  },
+//数量减
+  handleReduce(event){
+
+  },
+  //输入框输入数量
+  handleInput() {
+
+  },
+  //数量加1
+  handleAdd(event){
+    //console.log(event,'666') //点击加的时候打印
+    //根据打印的信息解构数据
+    const {id} = event.target.dataset;
+    //从data中解构出来goods
+    const {goods} = this.data;
+
+    //数量加一
+    goods[id].number += 1;
+
+    //修改data的值
+    this.setData({
+      goods
+    })
+    //保存到本地
+    wx.setStorageSync("goods", goods)
   }
 
 })
