@@ -52,7 +52,7 @@
         </view>
 
         <view class="jian" bindtap="handleReduce" data-id="{{item.goods_id}}">-</view>
-        <input value="{{ item.number }}" bindchange="bindchange" bindinput="bindInput" type="tel" data-id="{{item.goods_id}}"></input>
+        <input value="{{ item.number }}" bindchange="bindChange" bindinput="bindInput" type="tel" data-id="{{item.goods_id}}"></input>
         <view class="jia" bindtap="handleAdd" data-id="{{item.goods_id}}">+</view>
 
       </view>
