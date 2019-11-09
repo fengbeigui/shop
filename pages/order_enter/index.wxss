@@ -40,7 +40,7 @@
 
   .goods-list{
    border-top:20rpx #eee  solid;
-   padding-bottom:100rpx;
+   
  }
 
   .goods-item{
